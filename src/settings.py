@@ -1,3 +1,4 @@
+import env_file
 import os
 from pathlib import Path
 
@@ -5,6 +6,8 @@ base_dir = Path(__file__).parent.parent.absolute()
 
 
 class Settings:
+
+    env_file.load(f'{base_dir}/.env')
 
     db_postgres_host: str = os.environ.get('DB_POSTGRES_HOST')
     db_postgres_port: int = os.environ.get('DB_POSTGRES_PORT')
@@ -21,8 +24,3 @@ class Settings:
             self.db_postgres_port,
             self.db_postgres_name
         )
-
-    class Config:
-        env_file = f'{base_dir}/.env'
-
-

@@ -75,6 +75,17 @@ docs = ["sphinx-rtd-theme (>=0.2)", "Sphinx (>=3)"]
 all = ["numpy (>=1.20.0)", "pytest-pydocstyle (>=2.2.0)", "pytest-pycodestyle (>=2.2.0)", "pytest (>=6)", "pytest-pydocstyle (>=2)", "pytest-pycodestyle (>=2)", "pytest (==5.4.3)", "numpy (>=1.18.0)", "numpy (>=1.15.0)", "numpy (>=1.13.0)", "tox (>=3.7.0)", "sphinx (>=3)", "pytest-isort (>=1.2.0)", "pytest-cov (>=2.10.1)", "mock (>=1.3.0)", "check-manifest (>=0.42)", "sphinx-rtd-theme (>=0.2)", "Sphinx (>=3)"]
 
 [[package]]
+name = "env-file"
+version = "2020.12.3"
+description = ".env file handler. required for django, docker, etc"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+values = "*"
+
+[[package]]
 name = "et-xmlfile"
 version = "1.1.0"
 description = "An implementation of lxml.xmlfile for the standard library"
@@ -216,10 +227,18 @@ category = "main"
 optional = false
 python-versions = ">=3.7"
 
+[[package]]
+name = "values"
+version = "2020.12.3"
+description = "values.get(input) - create list from input"
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "6894ee81f940039ba7a69c5c595a1c5651cfc7450692cad367c2140dd7a60cba"
+content-hash = "6afb77980347796dd72b483ac7b9238f5eaffb9e04804b022af94fcfc99bc856"
 
 [metadata.files]
 aerich = []
@@ -228,6 +247,7 @@ asyncpg = []
 click = []
 colorama = []
 dictdiffer = []
+env-file = []
 et-xmlfile = []
 iso8601 = []
 numpy = []
@@ -241,3 +261,4 @@ six = []
 tomlkit = []
 tortoise-orm = []
 typing-extensions = []
+values = []

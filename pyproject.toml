@@ -11,6 +11,7 @@ tortoise-orm = "^0.19.2"
 openpyxl = "^3.0.10"
 aerich = "^0.7.1"
 asyncpg = "^0.26.0"
+env-file = "^2020.12.3"
 
 [tool.aerich]
 tortoise_orm = "src.model_description.TORTOISE_ORM"
