@@ -1,4 +1,4 @@
-from data_model import DataModel
+from src.data_model import DataModel
 
 
 class Repository:

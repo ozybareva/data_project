@@ -1,5 +1,6 @@
 from tortoise import Tortoise
-from settings import Settings
+from src.settings import Settings
+from src.model_description import TORTOISE_ORM
 
 
 class PostgresConnection:
@@ -9,8 +10,9 @@ class PostgresConnection:
 
     async def init_orm(self):
         await Tortoise.init(
-            db_url=self.settings.postgres_dsn,
-            modules={'models': ['data_model']}
+            config=TORTOISE_ORM
         )
         await Tortoise.generate_schemas()
+
+    async def close_orm(self) -> None:
         await Tortoise.close_connections()
